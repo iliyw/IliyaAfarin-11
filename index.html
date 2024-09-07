@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="assets/Plugin/Css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/sass/master.min.css" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container-fluid pt-md-5 pt-3">
+            <h1 class="text-center text-white">Check Your BMI !</h1>
+            <p class="text-center text-danger hidden error-txt">
+                Check your input values again!
+            </p>
+            <form>
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <span class="fw-bold text-white">Height(m):</span>
+                            <input
+                                placeholder="more than 47Cm(0.47)"
+                                required
+                                step="any"
+                                class="height p-2 px-3 mt-md-5 mt-1"
+                                type="number"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <span class="fw-bold text-white">Weight(Kl):</span>
+                            <input
+                                placeholder="More than 2.5Kl"
+                                required
+                                step="any"
+                                class="weight p-2 px-3 mt-md-5 mt-2"
+                                type="number"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <input
+                        type="button"
+                        class="resault border-0 p-2 px-5"
+                        value="Resault"
+                    />
+                    <input type="reset" class="reset border-0 p-2 px-5" />
+                </div>
+            </form>
+            <div class="modal-bmi bg-white position-absolute hidden">
+                <button
+                    class="close-modal p-1 px-2 position-absolute end-0 border-0"
+                >
+                    &times;
+                </button>
+                <div class="text-center py-5">
+                    <h2>Your BMI is :<span class="bmi text-wrap"></span></h2>
+                </div>
+                <ul class="bmi-info">
+                    <li>
+                        Under 18.5 - you are very underweight and possibly
+                        malnourished.
+                    </li>
+                    <li>
+                        18.5 to 24.9 - you have a healthy weight range for young
+                        and middle-aged adults.
+                    </li>
+                    <li>25.0 to 29.9 - you are overweight</li>
+                    <li>Over 30 - you are obese</li>
+                </ul>
+                <svg
+                    class="info-btn position-absolute hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 50 50"
+                    width="25px"
+                    height="25px"
+                >
+                    <path
+                        d="M25,2C12.297,2,2,12.297,2,25s10.297,23,23,23s23-10.297,23-23S37.703,2,25,2z M25,11c1.657,0,3,1.343,3,3s-1.343,3-3,3 s-3-1.343-3-3S23.343,11,25,11z M29,38h-2h-4h-2v-2h2V23h-2v-2h2h4v2v13h2V38z"
+                    />
+                </svg>
+            </div>
+        </div>
+        <div class="overlay hidden"></div>
+
+        <script src="assets/Plugin/js/bootstrap.bundle.js"></script>
+        <script src="assets/Js/app.js"></script>
+    </body>
+</html>

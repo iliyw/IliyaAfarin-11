@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.hidden {
+    display: none;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+body {
+    background-image: url("../../Public/Images/daniel-leone-g30P1zcOzXo-unsplash.jpg");
+    max-width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .height,
+    .weight {
+        opacity: 0.5;
+        border: none;
+        border-radius: 20px;
+    }
+    .resault,
+    .reset {
+        border-radius: 20px;
+        transition: 0.3s;
+        &:hover {
+            background-color: #335b65;
+            color: white;
+        }
+    }
+    .modal-bmi {
+        top: 10%;
+        left: calc(50% - 37%);
+        width: 75%;
+        z-index: 10;
+        .info-btn {
+            bottom: 10px;
+            right: 10px;
+        }
+        .close-modal {
+            transition: 0.2s;
+            &:hover {
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    body {
+        .modal-bmi {
+            .bmi-info {
+                display: none;
+            }
+            svg {
+                display: block;
+            }
+        }
+    }
+}
